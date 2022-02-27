@@ -1,0 +1,12 @@
+h1{
+    color: blue;
+}
+h2{
+    color: brown;
+}
+.Djangotwo{
+    border: 1px solid blue;
+}
+th, td{
+    border-bottom: 1px solid rgb(0, 100, 30);
+}
