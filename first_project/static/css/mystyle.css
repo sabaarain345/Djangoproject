@@ -10,3 +10,7 @@ h2{
 th, td{
     border-bottom: 1px solid rgb(0, 100, 30);
 }
+.Djangoone{
+    border: 1px solid saddlebrown;
+    list-style-position: outside;
+}

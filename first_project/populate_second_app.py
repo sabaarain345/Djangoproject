@@ -10,7 +10,7 @@ django.setup()
 
 ## Here we have FAKE POP SCRIPT
 import random
-from second_app.models import Topic, Webpage, AccessRecord
+from second_app.models import Topic, Webpage, AccessRecord, User
 from faker import Faker
 
 fakegen = Faker()
@@ -37,6 +37,17 @@ def populate(N=5):
 
         # Create a fake access record
         acc_rec = AccessRecord.objects.get_or_create(name=webpg,date=fake_date)[0]
+
+        # Create fake DATA for User models
+        fake_name = fakegen.name().split()
+        fake_first_name = fake_name[0]
+        fake_last_name = fake_name[1]
+        fake_email = fakegen.email()
+
+        # # Create Fake Record
+        user = User.objects.get_or_create(first_name=fake_first_name,last_name=fake_last_name,email=fake_email)[0]
+
+
 
 if __name__ == '__main__':
     print("Population Scripts")

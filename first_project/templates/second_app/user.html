@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %} 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "css/mystyle.css" %}" />
+    <title>second_app</title>
+</head>
+<body>
+    <h1>Hi! Welcome to Django Level Two </h1>
+    <h2>Here are your access records</h2>
+    <!-- {{ access_records }} -->
+    <div class="Djangoone"></div>
+    {% if user_acc %}
+
+    <ol>
+        {% for person in user_acc %}
+        <li>USER INFO</li>
+        <ul>
+            <li>First Name: {{ person.first_name }}</li>
+            <li>Last Name: {{ person.last_name}}</li>
+            <li>Email: {{ person.email}}</li>
+        </ul>
+    {% endfor %}
+    </ol>
+    {% endif %}
+
+
+
+</body>
+</html>
