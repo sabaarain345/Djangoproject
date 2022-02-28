@@ -12,5 +12,10 @@ th, td{
 }
 .Djangoone{
     border: 1px solid saddlebrown;
-    list-style-position: outside;
+}
+.one { list-style-type: disc; }
+.two { list-style-type: circle; }
+.three { list-style-type: square; }
+.list{
+    border: 1px solid blue;
 }

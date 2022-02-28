@@ -1,9 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import datetime
-
 # Connecting this view file to database record
 from second_app.models import Topic, Webpage, AccessRecord, User
+# importing for Model Form to connect the form to model
+from second_app.forms import NewUserForm
+
 
 # Create your views here.
 def help(request):
@@ -33,4 +35,20 @@ def users(request):
         user_dict = {'user_acc': user_list}
         return render(request,'second_app/user.html',context=user_dict)
 
+
+def index(request):
+        return render(request,'second_app/modelform.html')
+
+def model_form(request):
+        form = NewUserForm()
+
+        if request.method == "POST":
+                form = NewUserForm(request.POST)
+
+                if form.is_valid():
+                        form.save(commit=True)
+                        return index(request)
+                else:
+                        print("ERROR FORM INVALID")
+        return render(request, 'second_app/modelform.html', {'form': form})
 

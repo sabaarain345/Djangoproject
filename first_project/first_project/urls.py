@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from first_app import views
+from second_app import views
+from third_app_form import views
 from django.conf.urls import url
 from django.conf.urls import include
 
@@ -23,6 +25,7 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^first_app/', include('first_app.urls')),
     url(r'^second_app/', include('second_app.urls')),
+    url(r'^third_app_form/', include('third_app_form.urls')),
     # path('app/', views.index, name='index'),
     path('admin/', admin.site.urls),
 ]

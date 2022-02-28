@@ -15,13 +15,13 @@
     <div class="Djangoone"></div>
     {% if user_acc %}
 
-    <ol>
+    <ol class="list">
         {% for person in user_acc %}
         <li>USER INFO</li>
         <ul>
-            <li>First Name: {{ person.first_name }}</li>
-            <li>Last Name: {{ person.last_name}}</li>
-            <li>Email: {{ person.email}}</li>
+            <li class="one">First Name: {{ person.first_name }}</li>
+            <li class="two">Last Name: {{ person.last_name}}</li>
+            <li class="three">Email: {{ person.email}}</li>
         </ul>
     {% endfor %}
     </ol>
