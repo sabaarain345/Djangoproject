@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome To index</h1>
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li><a class="navbar-brand" href="{% url 'index' %}">BRAND</a></li>
+                <li><a class="navbar-link" href="{% url 'admin:index' %}">ADMIN</a></li>
+                <li><a class="navbar-link" href="{% url 'fourth_app:other' %}">OTHER</a></li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+    <div class="container">
+        {% block body_block %}
+        <!-- any thing outside of this will be inherit if we extend this -->
+        <h1>{{ text|cut:'l0 wo' }}</h1>
+        <h1>{{ number|add:"99" }}</h1>
+        {% endblock %}
+
+    </div>
+</body>
+</html>
