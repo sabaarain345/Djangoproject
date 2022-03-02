@@ -9,11 +9,11 @@ from second_app.forms import NewUserForm
 
 # Create your views here.
 def help(request):
-        my_dict = {'insert_me': "Hello! I am coming from Second_app/help.html"}
+        my_dict = {'help_me': "Hello! I am coming from Second_app/help.html"}
         return render(request,'second_app/help.html', context=my_dict)
 
 def about(request):
-        about_dict = {'help_me': "Hello! This is About page"}
+        about_dict = {'about_me': "Hello! This is About page"}
         return render(request,'second_app/help.html', context=about_dict)
 
 def current_datetime(request):

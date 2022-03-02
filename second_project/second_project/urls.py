@@ -24,5 +24,7 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^fourth_app/', include('fourth_app.urls')),
     url(r'^fifth_app/', include('fifth_app.urls')),
+    url(r'^logout/$', views.user_logout, name='user_logout'),
+    url(r'^special/$', views.special, name='special'),
     path('admin/', admin.site.urls),
 ]

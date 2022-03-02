@@ -15,7 +15,14 @@
                 <li><a class="navbar-brand" href="{% url 'index' %}">BRAND</a></li>
                 <li><a class="navbar-link" href="{% url 'admin:index' %}">ADMIN</a></li>
                 <li><a class="navbar-link" href="{% url 'fifth_app:other' %}">OTHER</a></li>
-
+            {% if user.is_authenticated %}
+               <li><a class="navbar-link" href="{% url 'logout' %}">Logout</a></li>
+            {% else %}
+               <li><a class="navbar-link" href="{% url 'fifth_app:user_login' %}"></a></li>
+            {% endif %}
+  
+  
+  
             </ul>
 
         </div>

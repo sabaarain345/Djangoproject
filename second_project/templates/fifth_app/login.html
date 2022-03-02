@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% extends "fifth_app/base.html" %}
+{% load static %}
+{% block body_block %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="jumbotron">
+        <h1>Please Login</h1>
+        <form action="{% url 'fifth_app:user_login' %}" method="post">
+            {% csrf_token %}
+            <label for="username"></label>
+            <input type="text" name="username" placeholder="Enter Username">
+            <input type="password" name="password">
+
+            <input type="submit" name="" value="Login">
+
+        </form>
+
+
+
+    </div>
+{% endblock %}
+</body>
+</html>

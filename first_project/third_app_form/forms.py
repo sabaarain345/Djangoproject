@@ -5,7 +5,7 @@ from django.core import validators
 
 def check_for_z(value):
     if value[0].lower() != 'z':
-        raise forms.ValidationError("Name Need To Start with Z! ")
+        raise forms.ValidationError("Name Need To Start with z! ")
 
 
 class UserForm(forms.Form):

@@ -143,3 +143,5 @@ STATICFILES_DIRS = [
 # Media Directory 
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
+
+LOGIN_URL = '/second_project/user_login'
